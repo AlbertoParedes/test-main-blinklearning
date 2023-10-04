@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Test from '../containers/Test.js';
+import Test from '../containers/Test.jsx';
 
 test('render correctly', () => {
   render(<Test />);

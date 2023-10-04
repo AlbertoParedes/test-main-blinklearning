@@ -1,38 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-
-import { store } from './store'
-import { Provider } from 'react-redux'
-
 import Home from './containers/Home';
 import Test from './containers/Test';
 import Results from './containers/Results';
+import { TestProvider } from './contexts/TestContext';
+import Button from './containers/Button';
 
 import './css/index.scss';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />,
+    path: '/',
+    element: <Home />
   },
   {
-    path: "/test",
-    element: <Test />,
+    path: '/test',
+    element: <Test />
   },
   {
-    path: "/results",
-    element: <Results />,
+    path: '/results',
+    element: <Results />
   },
+  {
+    path: '/button',
+    element: <Button />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <TestProvider>
       <RouterProvider router={router} />
-    </Provider>
+    </TestProvider>
   </React.StrictMode>
 );
 

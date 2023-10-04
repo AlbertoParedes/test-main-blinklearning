@@ -1,0 +1,61 @@
+.custom-button {
+  display: inline-block;
+  background-color: #cbcbcb;
+  margin: 2px;
+  padding: 6px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #555555;
+  text-transform: uppercase;
+  outline: 2px #666666 solid;
+  border: 2px #ffffff solid;
+  border-radius: 10px;
+}
+
+.custom-button .button-inner {
+  position: relative;
+  background-color: #d7d7d7;
+  padding: 13px 50px;
+  border-radius: 6px;
+  border: 1px #b0b0b0 solid;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 3px;
+}
+
+.custom-button .button-inner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: #00000020;
+  border-radius: 4px 4px 0 0;
+}
+
+.custom-button .button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.custom-button .button-text::before {
+  font-family: 'FontAwesome';
+  content: '\f005';
+  font-size: 20px;
+  color: #666666;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+}
+.custom-button .button-text::after {
+  content: '\f005';
+  font-family: 'FontAwesome';
+  font-size: 20px;
+  color: #888888;
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+}
