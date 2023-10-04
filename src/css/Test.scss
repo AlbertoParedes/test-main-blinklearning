@@ -1,0 +1,96 @@
+.test {
+  background: #e9eceb;
+  color: #4A4A4A;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.test-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin: auto;
+
+  .answer {
+    margin: 0 1rem;
+
+    &.valid {
+      .answer-title {
+        color: green;
+      }
+
+      .answer-placeholder {
+        border-color: green;
+      }
+    }
+
+    &.invalid {
+      .answer-title {
+        color: red;
+      }
+
+      .answer-placeholder {
+        border-color: red;
+      }
+    }
+
+    .answer-title {
+      text-transform: capitalize;
+    }
+  }
+
+  .answer-placeholder {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 2px #a8a5a5 solid;
+    border-radius: 6px;
+
+    .response-option {
+      margin: auto;
+    }
+  }
+}
+
+.exercise-resources {
+  .exercise-title {
+    margin: 0 0 2rem;
+    font-size: 18px;
+  }
+
+  .exercise-content {
+    display: flex;
+
+    .exercise-responses {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      .exercise-responses-options {
+        display: flex;
+      }
+
+      .response-option {
+        margin-right: 2rem;
+
+        &:hover {
+          cursor: grab;
+        }
+      }
+    }
+
+    .exercise-actions {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      .button {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+
